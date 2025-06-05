@@ -1,0 +1,281 @@
+:root {
+  --color-primario: #004aad;
+  --color-secundario: #f4f4f4;
+  --color-acento: #ffc107;
+  --color-texto: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid rgba(189, 0, 0, 0.486);
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+div#content {
+  & > main {
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+}
+
+header.navigation-menu {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  & h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  & nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    & li {
+      margin: 0 1rem;
+      & a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+main {
+  padding: 2rem 1rem;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.hero {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  & h2 {
+    font-size: 2rem;
+    color: var(--color-primario);
+  }
+  & p {
+    margin: 1rem 0;
+  }
+}
+
+.btn {
+  background-color: var(--color-acento);
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.servicios ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+  & .blog-post {
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & h3 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    & p {
+      flex-grow: 1;
+      margin-bottom: 1.25rem;
+    }
+    & .btn {
+      align-self: flex-start;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+    & img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.simulador {
+  & label,
+  & input {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  & input {
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  & p {
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+}
+
+footer {
+  background-color: var(--color-primario);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.flex-row-full {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  column-gap: 2rem;
+  align-items: center;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.reversed {
+  flex-flow: row-reverse nowrap;
+}
+
+.max-w-360px {
+  width: 100%;
+  max-width: 360px;
+  overflow: hidden;
+  border-radius: 1rem;
+  & img {
+    object-fit: cover;
+    aspect-ratio: 1;
+    height: 360px;
+  }
+}
+
+.section .title {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+.section .parraf {
+  font-size: 1.25rem;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: 0.3%;
+}
+
+.about-us-main {
+  section.section {
+    width: 100vw;
+    padding: 2rem 0;
+  }
+  & section.section:nth-child(even) {
+    background-color: whitesmoke;
+  }
+
+  & section.section:nth-child(odd) {
+    background-color: white;
+  }
+}
+
+/*BLOG CSS*/
+.blog-container-hero {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  gap: 1rem;
+
+  & article {
+    border-radius: 1rem;
+    box-shadow: 0px 0px 1px 0px #000;
+  }
+
+  & article:nth-child(1) {
+    background-color: blue;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  & article:nth-child(2) {
+    background-color: red;
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+  }
+
+  & article:nth-child(3) {
+    background-color: purple;
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+  }
+}
+
+/* Extra small phones (360px - 414px) */
+@media (max-width: 25.875rem) {
+  /* Estilos para móviles pequeños */
+}
+
+/* Small to medium phones */
+@media (min-width: 25.9375rem) and (max-width: 37.4375rem) {
+  /* Estilos para móviles medianos */
+}
+
+/* Tablets verticales y phablets grandes */
+@media (min-width: 37.5rem) and (max-width: 56.1875rem) {
+  /* Estilos para tablets verticales */
+}
+
+/* Tablets horizontales y pantallas pequeñas */
+@media (min-width: 56.25rem) and (max-width: 74.9375rem) {
+  /* Estilos para tablets en horizontal o laptops pequeñas */
+}
+
+/* Laptops comunes */
+@media (min-width: 75rem) and (max-width: 89.9375rem) {
+  /* Estilos para laptops comunes */
+}
+
+/* Pantallas Full HD */
+@media (min-width: 90rem) and (max-width: 119.9375rem) {
+  /* Estilos para pantallas grandes */
+}
+
+/* Ultra-wide screens */
+@media (min-width: 120rem) {
+  /* Estilos para pantallas muy grandes */
+}
