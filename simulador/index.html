@@ -26,6 +26,47 @@
         </nav>
       </header>
 
+      <main>
+        <section class="container section-spaced">
+          <div class="section-container">
+            <h2 style="text-align: center">¿Cuanto dinero necesitas?</h2>
+            <div class="centered col-6">
+              <form id="calculator-form" class="col-12">
+                <h3 id="amount-text"></h3>
+                <div class="input-form">                  
+                  <label for="amount" style="text-align: center;"></label>
+                  <input
+                    type="range"
+                    value="8"
+                    min="2000"
+                    max="300000"
+                    step="2000"
+                    name="amount"
+                    id="amount"
+                    style="margin: 1rem 0;"
+                  /> 
+                </div>
+                <div class="input-form">
+                  <label for="period"> ¿En cuantas quincenas quieres pagar? </label>
+                  <input
+                    type="range"
+                    value="8"
+                    min="8"
+                    max="56"
+                    step="8"
+                    name="period"
+                    id="period"
+                    style="margin: 1rem 0;"
+                  /> 
+                  <p id="period-text" style="text-align: center">8 quincenas</p>
+                </div>                
+              </form>
+              <p id="resultado" class="centered" style="margin: 1rem 0; text-align: end;"> </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
       <!--Footer-->
       <footer>
         <p id="copyright"></p>
@@ -34,4 +75,5 @@
   </body>
 
   <script src="../src/javascript/dom.js"></script>
+  <script src="./simulador.js"></script>
 </html>
