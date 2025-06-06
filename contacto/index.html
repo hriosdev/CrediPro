@@ -1,33 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Credipro - Tu Crédito Fácil y Rápido</title>
-      <link rel="stylesheet" href="../src/styles/global.css" />
-      <link rel="icon" type="image/png" href="../src/assets/images/CREDIPROLOGO.png" />
-      <link rel="icon" type="image/x-icon" href="../src/assets/images/CREDIPROLOGO.png" />
-    </head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credipro - Tu Crédito Fácil y Rápido</title>
+    <link rel="stylesheet" href="../src/styles/global.css" />
+    <link rel="icon" type="image/png" href="../src/assets/images/CREDIPROLOGO.png" />
+    <link rel="icon" type="image/x-icon" href="../src/assets/images/CREDIPROLOGO.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <div id="content">
       <!-- Navigation menu -->
-      <header class="navigation-menu">
-        <h1>Contacto</h1>
+
+      <header class="bg-[--primary] text-white text-center relative z-[10]">
         <nav>
-          <ul>
-            <li><a href="../">Inicio</a></li>
-            <li><a href="../nosotros">¿Quiénes Somos?</a></li>
-            <li><a href="../simulador">Solicita tu Crédito</a></li>
-            <li><a href="../blog">Blog</a></li>
-            <li><a href="#">Contacto</a></li>
+          <ul class="h-[--header-height] flex flex-row justify-center flex-wrap">
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="../"
+                >Inicio</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="../nosotros"
+                >¿Quiénes Somos?</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="../simulador"
+                >Solicita tu Crédito</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="../blog"
+                >Blog</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="#"
+                >Contacto</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
 
       <!--Footer-->
-      <footer>
+      <footer class="bg-[--primary] text-white text-center p-4">
         <p id="copyright"></p>
       </footer>
     </div>

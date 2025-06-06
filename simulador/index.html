@@ -1,38 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Credipro - Tu Crédito Fácil y Rápido</title>
-      <link rel="stylesheet" href="../src/styles/global.css" />
-      <link rel="icon" type="image/png" href="../src/assets/images/CREDIPROLOGO.png" />
-      <link rel="icon" type="image/x-icon" href="../src/assets/images/CREDIPROLOGO.png" />
-      <script src="https://cdn.tailwindcss.com"></script>
-    </head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credipro - Tu Crédito Fácil y Rápido</title>
+    <link rel="stylesheet" href="../src/styles/global.css" />
+    <link rel="icon" type="image/png" href="../src/assets/images/CREDIPROLOGO.png" />
+    <link rel="icon" type="image/x-icon" href="../src/assets/images/CREDIPROLOGO.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <div id="content">
       <!-- Navigation menu -->
-      <header class="navigation-menu">
+      <header class="bg-[--primary] text-white text-center relative z-[10]">
         <nav>
-          <ul>
-            <li><a href="../">Inicio</a></li>
-            <li><a href="../nosotros/">¿Quiénes Somos?</a></li>
-            <li><a href="#">Solicita tu Crédito</a></li>
-            <li><a href="../blog">Blog</a></li>
-            <li><a href="../contacto">Contacto</a></li>
+          <ul class="h-[--header-height] flex flex-row justify-center flex-wrap">
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="../"
+                >Inicio</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="../nosotros/"
+                >¿Quiénes Somos?</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="#"
+                >Solicita tu Crédito</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="../blog"
+                >Blog</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="../contacto"
+                >Contacto</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
-
       <main>
         <section class="w-screen py-8 px-0">
           <div class="w-full block max-w-[64rem] my-8 mx-auto">
             <h2 class="text-center font-bold text-[2rem] block mb-4">¿Cuanto dinero necesitas?</h2>
             <div class="w-3/4 mx-auto">
               <form id="calculator-form" class="w-full">
-                <h3 id="amount-text" class="text-[3rem] font-semibold font-[montserrat-semibold] text-center">
+                <h3
+                  id="amount-text"
+                  class="text-[3rem] font-semibold font-[montserrat-semibold] text-center"
+                >
                   $3,000.00
                 </h3>
                 <div class="input-form amount-range">
@@ -47,15 +77,31 @@
                     id="amount"
                   />
                   <div class="flex flex-row justify-between items-center mb-4">
-                    <label for="amount" class="amount-label">$3,000.00</label>
-                    <label for="amount" class="amount-label">$200,000.00</label>
+                    <label
+                      for="amount"
+                      class="text-[1.25rem] font-bold text-[--dark] font-[montserrat-semibold]"
+                      >$3,000.00</label
+                    >
+                    <label
+                      for="amount"
+                      class="text-[1.25rem] font-bold text-[--dark] font-[montserrat-semibold]"
+                      >$200,000.00</label
+                    >
                   </div>
                 </div>
                 <div class="input-form">
                   <label for="period" class="text-center font-[montserrat-medium]">
                     ¿En cuantas quincenas quieres pagar?
                   </label>
-                  <input type="range" value="24" min="12" max="60" step="12" name="period" id="period" />
+                  <input
+                    type="range"
+                    value="24"
+                    min="12"
+                    max="60"
+                    step="12"
+                    name="period"
+                    id="period"
+                  />
                   <div class="flex flex-row justify-between items-center mb-4 pt-1">
                     <label for="period">12</label>
                     <label for="period">24</label>
@@ -63,7 +109,9 @@
                     <label for="period">48</label>
                     <label for="period">60</label>
                   </div>
-                  <h3 class="text-center block mb-4 font-[montserrat-medium]">Tu pago quincenal sera de</h3>
+                  <h3 class="text-center block mb-4 font-[montserrat-medium]">
+                    Tu pago quincenal sera de
+                  </h3>
                   <input
                     type="text"
                     disabled
@@ -84,7 +132,7 @@
       </main>
 
       <!--Footer-->
-      <footer>
+      <footer class="bg-[--primary] text-white text-center p-4">
         <p id="copyright"></p>
       </footer>
     </div>

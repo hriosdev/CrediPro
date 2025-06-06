@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Credipro - Tu Crédito Fácil y Rápido</title>
-      <link rel="stylesheet" href="../src/styles/global.css" />
-      <link rel="icon" type="image/png" href="../src/assets/images/CREDIPROLOGO.png" />
-      <link rel="icon" type="image/x-icon" href="../src/assets/images/CREDIPROLOGO.png" />
-      <script src="https://cdn.tailwindcss.com"></script>
-    </head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credipro - Tu Crédito Fácil y Rápido</title>
+    <link rel="stylesheet" href="../src/styles/global.css" />
+    <link rel="icon" type="image/png" href="../src/assets/images/CREDIPROLOGO.png" />
+    <link rel="icon" type="image/x-icon" href="../src/assets/images/CREDIPROLOGO.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <div id="content">
       <!-- Navigation menu -->
-      <header class="navigation-menu">
+
+      <header class="bg-[--primary] text-white text-center relative z-[10]">
         <nav>
-          <ul>
-            <li><a href="../">Inicio</a></li>
-            <li><a href="../nosotros">¿Quiénes Somos?</a></li>
-            <li><a href="../simulador">Solicita tu Crédito</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="../contacto">Contacto</a></li>
+          <ul class="h-[--header-height] flex flex-row justify-center flex-wrap">
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="../"
+                >Inicio</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="../nosotros"
+                >¿Quiénes Somos?</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="../simulador"
+                >Solicita tu Crédito</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="#"
+                >Blog</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="../contacto"
+                >Contacto</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
@@ -29,36 +58,61 @@
       <main>
         <h2 class="text-center font-bold text-[2rem] block my-4">Nuestro Blog</h2>
         <div class="w-full block max-w-[64rem] my-8 mx-auto">
-          <section class="grid grid-cols-2 grid-rows-4 gap-4 gap-4">
+          <section class="grid grid-cols-2 grid-rows-4 gap-4 gap-4 blog-container-hero">
             <article class="row-span-4 min-h-[30rem] border rounded-lg">
-              <div class="blog-post">
-                <h3>¿Qué es un crédito de nómina?</h3>
-                <p>
-                  Descubre cómo funciona este tipo de financiamiento, sus ventajas y lo que debes saber antes
-                  de solicitar uno.
+              <div class="bg-[#f9f9f9] rounded-lg p-6 flex flex-col justify-end h-full">
+                <h3
+                  class="font-semibold font-[montserrat-semibold] mb-4 text-white text-[1.5rem] leading-1"
+                >
+                  ¿Qué es un crédito de nómina?
+                </h3>
+                <p class="font-semibold block mb-4 text-white">
+                  Descubre cómo funciona este tipo de financiamiento, sus ventajas y lo que debes
+                  saber antes de solicitar uno.
                 </p>
-                <a href="#" class="button">Leer más</a>
+                <a
+                  href="#"
+                  class="py-2 px-4 bg-[#007bff] text-white rounded-md hover:bg-[#0056b3] transition-all max-w-max"
+                  >Leer más</a
+                >
               </div>
             </article>
 
             <article class="row-span-2 min-h-[15rem] border rounded-lg">
-              <div class="blog-post">
-                <h3>5 consejos para mejorar tu salud financiera</h3>
-                <p>
-                  Aprende hábitos clave para organizar tus finanzas personales y tomar mejores decisiones con
-                  tu dinero.
+              <div class="bg-[#f9f9f9] rounded-lg p-10 flex flex-col justify-end h-full">
+                <h3
+                  class="font-semibold font-[montserrat-semibold] mb-4 text-white text-[1.5rem] leading-1"
+                >
+                  5 consejos para mejorar tu salud financiera
+                </h3>
+                <p class="font-semibold block mb-4 text-white">
+                  Aprende hábitos clave para organizar tus finanzas personales y tomar mejores
+                  decisiones con tu dinero.
                 </p>
-                <a href="#" class="button">Leer más</a>
+                <a
+                  href="#"
+                  class="py-2 px-4 bg-[#007bff] text-white rounded-md hover:bg-[#0056b3] transition-all max-w-max"
+                  >Leer más</a
+                >
               </div>
             </article>
 
             <article class="row-span-2 col-start-2 row-start-3 min-h-[15rem] border rounded-lg">
-              <div class="blog-post">
-                <h3>¿Por qué elegir Credipro?</h3>
-                <p>
-                  Te contamos las razones por las que somos tu mejor opción en gestión de créditos de nómina.
+              <div class="bg-[#f9f9f9] rounded-lg p-10 flex flex-col justify-end h-full">
+                <h3
+                  class="font-semibold font-[montserrat-semibold] mb-4 text-white text-[1.5rem] leading-1"
+                >
+                  ¿Por qué elegir Credipro?
+                </h3>
+                <p class="font-semibold block mb-4 text-white">
+                  Te contamos las razones por las que somos tu mejor opción en gestión de créditos
+                  de nómina.
                 </p>
-                <a href="#" class="button">Leer más</a>
+                <a
+                  href="#"
+                  class="py-2 px-4 bg-[#007bff] text-white rounded-md hover:bg-[#0056b3] transition-all max-w-max"
+                  >Leer más</a
+                >
               </div>
             </article>
           </section>
@@ -66,7 +120,7 @@
       </main>
 
       <!--Footer-->
-      <footer>
+      <footer class="bg-[--primary] text-white text-center p-4">
         <p id="copyright"></p>
       </footer>
     </div>

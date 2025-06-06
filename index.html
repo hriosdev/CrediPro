@@ -12,53 +12,85 @@
   <body>
     <div id="content">
       <!-- Navigation menu -->
-      <header class="navigation-menu">
+      <header class="bg-[--primary] text-white text-center relative z-[10]">
         <nav>
-          <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/nosotros">¿Quiénes Somos?</a></li>
-            <li><a href="/simulador">Solicita tu Crédito</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/contacto">Contacto</a></li>
+          <ul class="h-[--header-height] flex flex-row justify-center flex-wrap">
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="/"
+                >Inicio</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="/nosotros"
+                >¿Quiénes Somos?</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="/simulador"
+                >Solicita tu Crédito</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="/blog"
+                >Blog</a
+              >
+            </li>
+            <li class="my-0 mx-4">
+              <a
+                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                href="/contacto"
+                >Contacto</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
 
       <!--Inicio-->
       <main>
-        <header class="hero fullscreen">
-          <div class="place-center">
+        <header
+          class="hero block w-screen h-screen min-w-screen max-w-screen h-min-screen h-max-screen relative"
+        >
+          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <h1>Credipro</h1>
           </div>
         </header>
 
-        <section id="inicio" class="container section-spaced">
-          <div class="section-container">
+        <section id="inicio" class="w-screen py-8">
+          <div class="w-full block max-w-[64rem] my-8 mx-auto">
             <h2>Tu crédito, sin complicaciones</h2>
             <p>
-              En CREDIPRO estamos para ayudarte a dar ese paso que necesitas. Solicita tu crédito de nómina de
-              forma rápida, segura y sin estrés.
+              En CREDIPRO estamos para ayudarte a dar ese paso que necesitas. Solicita tu crédito de
+              nómina de forma rápida, segura y sin estrés.
             </p>
             <a href="#simulador" class="button">Solicita tu crédito</a>
           </div>
         </section>
         <!--Nosotros-->
-        <section id="nosotros" class="container section-spaced">
-          <div class="section-container">
+        <section id="nosotros" class="w-screen py-8">
+          <div class="w-full max-w-[64rem] my-8 mx-auto block">
             <h2>¿Quiénes somos?</h2>
             <p>
               En <strong>CREDIPRO</strong> nos especializamos en gestionar
-              <strong>créditos de nómina para trabajadores del gobierno</strong>, brindando una experiencia
-              ágil, clara y sin complicaciones. Te acompañamos desde la asesoría inicial hasta que recibes tu
-              crédito, colaborando con instituciones financieras líderes para brindarte soluciones accesibles
-              y seguras.
+              <strong>créditos de nómina para trabajadores del gobierno</strong>, brindando una
+              experiencia ágil, clara y sin complicaciones. Te acompañamos desde la asesoría inicial
+              hasta que recibes tu crédito, colaborando con instituciones financieras líderes para
+              brindarte soluciones accesibles y seguras.
             </p>
           </div>
         </section>
 
         <!--cotizacion-->
-        <section id="simulador" class="container section-spaced">
-          <div class="section-container">
+        <section id="simulador" class="w-screen py-8">
+          <div class="w-full max-w-[64rem] my-8 mx-auto block">
             <h2>Solicita tu Crédito</h2>
             <label for="monto">Monto solicitado:</label>
             <input type="number" id="monto" placeholder="$" />
@@ -71,19 +103,19 @@
         </section>
 
         <!--Blog-->
-        <section id="blog" class="container section-spaced">
-          <div class="section-container">
+        <section id="blog" class="w-screen py-8">
+          <div class="w-full max-w-[64rem] my-8 mx-auto block">
             <h2>Blog</h2>
             <p>
-              Próximamente encontrarás aquí artículos sobre educación financiera, consejos para gestionar tu
-              crédito y más recursos útiles.
+              Próximamente encontrarás aquí artículos sobre educación financiera, consejos para
+              gestionar tu crédito y más recursos útiles.
             </p>
           </div>
         </section>
 
         <!--contacto-->
-        <section id="contacto" class="container section-spaced">
-          <div class="section-container">
+        <section id="contacto" class="w-screen py-8">
+          <div class="w-full max-w-[64rem] my-8 mx-auto block">
             <h2>Contáctanos</h2>
             <form>
               <input type="text" placeholder="Nombre completo" required /><br />
@@ -96,7 +128,7 @@
       </main>
 
       <!--Footer-->
-      <footer>
+      <footer class="bg-[--primary] text-white text-center p-4">
         <p id="copyright"></p>
       </footer>
     </div>
