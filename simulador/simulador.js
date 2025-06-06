@@ -1,39 +1,33 @@
-const periodText = document.querySelector("p#period-text");
-
 const periodInputElement = document.querySelector("input#period");
 const amountInputElement = document.querySelector("input#amount");
 const amountTextElement = document.querySelector("h3#amount-text");
-
-periodInputElement.addEventListener("input", function () {
-  calculateCreditAmount();
-});
-amountInputElement.addEventListener("input", function () {
-  calculateCreditAmount();
-});
-
-document.querySelector("form#calculator-form").addEventListener("submit", function (event) {
-  event.preventDefault();
-});
+const resultInputElement = document.querySelector("#results");
+const formElement = document.querySelector("form#calculator-form");
+const mexicanCurrency = { style: "currency", currency: "MXN" };
 
 const calculateCreditAmount = () => {
   try {
-    const mount = parseFloat(amountInputElement.value);
+    const amount = parseFloat(amountInputElement.value.replace(/,/g, ""));
     const time = parseInt(periodInputElement.value);
-
     const rate = 0.05;
 
-    if (isNaN(mount) || isNaN(time)) throw new Error("Por favor, ingresa valores válidos.");
+    if (isNaN(amount) || isNaN(time)) throw new Error("Por favor, ingresa valores válidos.");
 
-    const resultInputElement = document.querySelector("p#resultado");
-    const payment = (mount * rate) / (1 - Math.pow(1 + rate, -time));
-    const textContext = `Tu pago mensual sería de <strong>$${payment.toFixed(2)}</strong>`;
+    const payment = (amount * rate) / (1 - Math.pow(1 + rate, -time));
+    const textContext = getCurrencyFormat(payment.toFixed(2));
+    const currency = getCurrencyFormat(amount);
 
-    amountTextElement.innerHTML = "$ " + amountInputElement.value + ".00";
-    resultInputElement.innerHTML = textContext;
-    periodText.innerHTML = periodInputElement.value + " quincenas";
+    amountTextElement.textContent = currency ?? 0;
+    resultInputElement.value = textContext ?? 0;
   } catch (error) {
     window.alert(error.message);
   }
 };
 
-document.addEventListener("DOMContentLoaded", updatePeriodText);
+const getCurrencyFormat = (value) => new Intl.NumberFormat("es-MX", mexicanCurrency).format(value);
+
+periodInputElement.addEventListener("input", calculateCreditAmount);
+amountInputElement.addEventListener("input", calculateCreditAmount);
+formElement.addEventListener("submit", (e) => e.preventDefault());
+
+calculateCreditAmount();

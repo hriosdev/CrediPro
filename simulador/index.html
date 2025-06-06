@@ -8,13 +8,13 @@
       <link rel="stylesheet" href="../src/styles/global.css" />
       <link rel="icon" type="image/png" href="../src/assets/images/CREDIPROLOGO.png" />
       <link rel="icon" type="image/x-icon" href="../src/assets/images/CREDIPROLOGO.png" />
+      <script src="https://cdn.tailwindcss.com"></script>
     </head>
   </head>
   <body>
     <div id="content">
       <!-- Navigation menu -->
       <header class="navigation-menu">
-        <h1>Credipro</h1>
         <nav>
           <ul>
             <li><a href="../">Inicio</a></li>
@@ -27,41 +27,57 @@
       </header>
 
       <main>
-        <section class="container section-spaced">
-          <div class="section-container">
-            <h2 style="text-align: center">¿Cuanto dinero necesitas?</h2>
-            <div class="centered col-6">
-              <form id="calculator-form" class="col-12">
-                <h3 id="amount-text"></h3>
-                <div class="input-form">                  
-                  <label for="amount" style="text-align: center;"></label>
+        <section class="w-screen py-8 px-0">
+          <div class="w-full block max-w-[64rem] my-8 mx-auto">
+            <h2 class="text-center font-bold text-[2rem] block mb-4">¿Cuanto dinero necesitas?</h2>
+            <div class="w-3/4 mx-auto">
+              <form id="calculator-form" class="w-full">
+                <h3 id="amount-text" class="text-[3rem] font-semibold font-[montserrat-semibold] text-center">
+                  $3,000.00
+                </h3>
+                <div class="input-form amount-range">
+                  <label for="amount" style="text-align: center"></label>
                   <input
                     type="range"
-                    value="8"
-                    min="2000"
-                    max="300000"
-                    step="2000"
+                    value="3000"
+                    min="3000"
+                    max="200000"
+                    step="3000"
                     name="amount"
                     id="amount"
-                    style="margin: 1rem 0;"
-                  /> 
+                  />
+                  <div class="flex flex-row justify-between items-center mb-4">
+                    <label for="amount" class="amount-label">$3,000.00</label>
+                    <label for="amount" class="amount-label">$200,000.00</label>
+                  </div>
                 </div>
                 <div class="input-form">
-                  <label for="period"> ¿En cuantas quincenas quieres pagar? </label>
+                  <label for="period" class="text-center font-[montserrat-medium]">
+                    ¿En cuantas quincenas quieres pagar?
+                  </label>
+                  <input type="range" value="24" min="12" max="60" step="12" name="period" id="period" />
+                  <div class="flex flex-row justify-between items-center mb-4 pt-1">
+                    <label for="period">12</label>
+                    <label for="period">24</label>
+                    <label for="period">36</label>
+                    <label for="period">48</label>
+                    <label for="period">60</label>
+                  </div>
+                  <h3 class="text-center block mb-4 font-[montserrat-medium]">Tu pago quincenal sera de</h3>
                   <input
-                    type="range"
-                    value="8"
-                    min="8"
-                    max="56"
-                    step="8"
-                    name="period"
-                    id="period"
-                    style="margin: 1rem 0;"
-                  /> 
-                  <p id="period-text" style="text-align: center">8 quincenas</p>
-                </div>                
+                    type="text"
+                    disabled
+                    id="results"
+                    class="text-center min-h-10 max-h-10 rounded-lg max-w-max my-0 mx-auto block px-8 py-2 w-1/2 min-w-1/2 flex items-center text-center text-white mb-4"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="min-h-10 max-h-10 rounded-lg my-0 mx-auto block px-8 py-2 w-1/2 flex items-center text-center"
+                >
+                  <span class="text-center text-white mx-auto">Solicitar credito</span>
+                </button>
               </form>
-              <p id="resultado" class="centered" style="margin: 1rem 0; text-align: end;"> </p>
             </div>
           </div>
         </section>
