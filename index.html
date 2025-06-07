@@ -8,44 +8,88 @@
     <link rel="icon" type="image/png" href="src/assets/images/CREDIPROLOGO.png" />
     <link rel="icon" type="image/x-icon" href="src/assets/images/CREDIPROLOGO.png" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #hero-background-picture {
+        background-image: url("./src/assets/images/hero-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100vw;
+        height: calc(100vh - 2.5rem);
+      }
+      a[role="link"] {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 0;
+          left: 1.25rem;
+          bottom: 0.75rem;
+          transition: all 150ms linear;
+        }
+
+        &:hover::before {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: calc(100% - 2.5rem);
+          background-color: white;
+          left: 1.25rem;
+          bottom: 0.75rem;
+          transition: all 150ms linear;
+        }
+      }
+
+      textarea {
+        resize: none;
+        padding: 1rem;
+      }
+    </style>
   </head>
   <body>
     <div id="content">
       <!-- Navigation menu -->
-      <header class="bg-[--primary] text-white text-center relative z-[10]">
+      <header class="bg-[#262626] text-white text-center relative z-[10]">
         <nav>
-          <ul class="h-[--header-height] flex flex-row justify-center flex-wrap">
-            <li class="my-0 mx-4">
+          <ul class="flex flex-row justify-center flex-wrap items-center max-h-14 min-h-14">
+            <li>
               <a
-                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                class="text-[13px] font-[montserrat-medium] text-white block h-14 px-5 flex items-center hover:bg-[#2c2c2c]"
+                role="link"
                 href="/"
                 >Inicio</a
               >
             </li>
-            <li class="my-0 mx-4">
+            <li>
               <a
-                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                class="text-[13px] font-[montserrat-medium] text-white block h-14 px-5 flex items-center hover:bg-[#2c2c2c]"
+                role="link"
                 href="/nosotros"
                 >¿Quiénes Somos?</a
               >
             </li>
-            <li class="my-0 mx-4">
+            <li>
               <a
-                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                class="text-[13px] font-[montserrat-medium] text-white block h-14 px-5 flex items-center hover:bg-[#2c2c2c]"
+                role="link"
                 href="/simulador"
                 >Solicita tu Crédito</a
               >
             </li>
-            <li class="my-0 mx-4">
+            <li>
               <a
-                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                class="text-[13px] font-[montserrat-medium] text-white block h-14 px-5 flex items-center hover:bg-[#2c2c2c]"
+                role="link"
                 href="/blog"
                 >Blog</a
               >
             </li>
-            <li class="my-0 mx-4">
+            <li>
               <a
-                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                class="text-[13px] font-[montserrat-medium] text-white block h-14 px-5 flex items-center hover:bg-[#2c2c2c]"
+                role="link"
                 href="/contacto"
                 >Contacto</a
               >
@@ -56,84 +100,259 @@
 
       <!--Inicio-->
       <main>
-        <header
-          class="hero block w-screen h-screen min-w-screen max-w-screen h-min-screen h-max-screen relative"
-        >
-          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <h1>Credipro</h1>
+        <header>
+          <div id="hero-background-picture">
+            <div class="flex flex-row justify-around items-center h-[calc(100vh_-_3rem)]">
+              <h2
+                class="text-white font-bold text-[3rem] font-[montserrat-bold] text-center block max-w-[20%]"
+              >
+                CREDIPRO te ayuda a cumplir tus metas
+              </h2>
+              <img src="https://www.credipro.mx/images/step1-white.png" alt="" />
+              <h3>Solicita tu crédito</h3>
+              <h2
+                class="text-white font-bold text-[3rem] font-[montserrat-bold] text-center block max-w-[20%]"
+              >
+                Avanzamos juntos con CREDIPRO
+                <img src="https://www.credipro.mx/images/step5.png" alt="" />
+                <h3>Firma tu contrato y entrega papeleria</h3>
+              </h2>
+              <h2
+                class="text-white font-bold text-[3rem] font-[montserrat-bold] text-center block max-w-[20%]"
+              >
+                "Compré mi casa gracias a CREDIPRO"
+                <img src="https://www.credipro.mx/images/step3.png" alt="" class="max-w-[128px]" />
+                <h3>Recibe tu dinero en 24 horas</h3>
+              </h2>
+            </div>
           </div>
         </header>
 
-        <section id="inicio" class="w-screen py-8">
+        <section id="inicio" class="w-screen py-8 bg-white">
           <div class="w-full block max-w-[64rem] my-8 mx-auto">
-            <h2>Tu crédito, sin complicaciones</h2>
-            <p>
-              En CREDIPRO estamos para ayudarte a dar ese paso que necesitas. Solicita tu crédito de
-              nómina de forma rápida, segura y sin estrés.
-            </p>
-            <a href="#simulador" class="button">Solicita tu crédito</a>
+            <div class="flex flex-row justify-between items-center gap-x-4">
+              <div class="max-w-1/2">
+                <h2 class="font-semibold font-[montserrat-semibold] text-[2rem] text-slate-700 mb-6">
+                  Tu crédito, sin complicaciones
+                </h2>
+                <p class="font-[montserrat] text-[1.25rem] text-slate-600 block mb-6">
+                  En CREDIPRO estamos para ayudarte a dar ese paso que necesitas. Solicita tu crédito de
+                  nómina de forma rápida, segura y sin estrés.
+                </p>
+                <a
+                  href="#simulador"
+                  class="flex items-center px-8 max-w-max py-4 rounded-md ml-auto bg-blue-500 text-white font-medium font-[montserrat-medium] hover:bg-blue-600 transition-all"
+                  >Solicita tu crédito</a
+                >
+              </div>
+              <img
+                class="block w-[480px]"
+                style="mix-blend-mode: multiply; aspect-ratio: 1"
+                src="https://img.freepik.com/free-psd/portrait-middle-aged-woman_23-2151825913.jpg?t=st=1749274443~exp=1749278043~hmac=f9bd6bb07171e751bc2e446479b9020ba2edbd5484f973e565b8343dc6761dc1&w=1380"
+                alt="thump-up"
+              />
+            </div>
           </div>
         </section>
         <!--Nosotros-->
         <section id="nosotros" class="w-screen py-8">
-          <div class="w-full max-w-[64rem] my-8 mx-auto block">
-            <h2>¿Quiénes somos?</h2>
-            <p>
-              En <strong>CREDIPRO</strong> nos especializamos en gestionar
-              <strong>créditos de nómina para trabajadores del gobierno</strong>, brindando una
-              experiencia ágil, clara y sin complicaciones. Te acompañamos desde la asesoría inicial
-              hasta que recibes tu crédito, colaborando con instituciones financieras líderes para
-              brindarte soluciones accesibles y seguras.
-            </p>
+          <div class="w-full block max-w-[64rem] my-8 mx-auto">
+            <div class="flex flex-row-reverse justify-between items-center gap-x-4">
+              <div class="max-w-1/2">
+                <h2 class="font-semibold font-[montserrat-semibold] text-[2rem] text-slate-700 mb-6">
+                  ¿Quiénes somos?
+                </h2>
+                <p class="font-[montserrat] text-[1.25rem] text-slate-600 block mb-6">
+                  En <strong class="font-bold font-[montserrat-bold]">CREDIPRO</strong> nos especializamos en
+                  gestionar <strong>créditos de nómina para trabajadores del gobierno</strong>, brindando una
+                  experiencia ágil, clara y sin complicaciones. Te acompañamos desde la asesoría inicial hasta
+                  que recibes tu crédito, colaborando con instituciones financieras líderes para brindarte
+                  soluciones accesibles y seguras.
+                </p>
+              </div>
+              <img
+                class="block w-[480px]"
+                style="mix-blend-mode: multiply; aspect-ratio: 1"
+                src="https://img.freepik.com/free-psd/portrait-middle-aged-woman_23-2151825917.jpg"
+                alt="who-we-are"
+              />
+            </div>
           </div>
         </section>
 
         <!--cotizacion-->
-        <section id="simulador" class="w-screen py-8">
+        <section id="simulador" class="w-screen py-8 bg-white">
           <div class="w-full max-w-[64rem] my-8 mx-auto block">
-            <h2>Solicita tu Crédito</h2>
-            <label for="monto">Monto solicitado:</label>
-            <input type="number" id="monto" placeholder="$" />
-            <label for="plazo">Plazo en meses:</label>
-            <input type="number" id="plazo" placeholder="Ej. 12" />
-
-            <button class="button" onclick="calcularCredito()">Calcular</button>
-            <p id="resultado"></p>
+            <div class="w-full block max-w-[64rem] my-8 mx-auto">
+              <h2
+                class="font-semibold font-[montserrat-semibold] text-[2rem] text-slate-700 mb-6 text-center"
+              >
+                ¿Cuanto dinero necesitas?
+              </h2>
+              <div class="w-3/4 mx-auto">
+                <form id="calculator-form" class="w-full">
+                  <h3
+                    id="amount-text"
+                    class="text-[3rem] font-semibold font-[montserrat-semibold] text-center"
+                  >
+                    $3,000.00
+                  </h3>
+                  <div class="input-form amount-range">
+                    <label for="amount" style="text-align: center"></label>
+                    <input
+                      type="range"
+                      value="3000"
+                      min="3000"
+                      max="200000"
+                      step="3000"
+                      name="amount"
+                      id="amount"
+                    />
+                    <div class="flex flex-row justify-between items-center mb-4">
+                      <label
+                        for="amount"
+                        class="text-[1.25rem] font-bold text-[--dark] font-[montserrat-semibold]"
+                        >$3,000.00</label
+                      >
+                      <label
+                        for="amount"
+                        class="text-[1.25rem] font-bold text-[--dark] font-[montserrat-semibold]"
+                        >$200,000.00</label
+                      >
+                    </div>
+                  </div>
+                  <div class="input-form">
+                    <label for="period" class="text-center font-[montserrat-medium]">
+                      ¿En cuantas quincenas quieres pagar?
+                    </label>
+                    <input type="range" value="24" min="12" max="60" step="12" name="period" id="period" />
+                    <div class="flex flex-row justify-between items-center mb-4 pt-1">
+                      <label for="period">12</label>
+                      <label for="period">24</label>
+                      <label for="period">36</label>
+                      <label for="period">48</label>
+                      <label for="period">60</label>
+                    </div>
+                    <h3 class="text-center block mb-4 font-[montserrat-medium]">Tu pago quincenal sera de</h3>
+                    <input
+                      type="text"
+                      disabled
+                      id="results"
+                      class="text-center min-h-10 max-h-10 rounded-lg max-w-max my-0 mx-auto block px-8 py-2 w-1/2 min-w-1/2 flex items-center text-center text-white mb-4"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="min-h-10 max-h-10 rounded-lg my-0 mx-auto block px-8 py-2 w-1/2 flex items-center text-center"
+                  >
+                    <span class="text-center text-white mx-auto">Solicitar credito</span>
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </section>
 
         <!--Blog-->
         <section id="blog" class="w-screen py-8">
           <div class="w-full max-w-[64rem] my-8 mx-auto block">
-            <h2>Blog</h2>
-            <p>
-              Próximamente encontrarás aquí artículos sobre educación financiera, consejos para
-              gestionar tu crédito y más recursos útiles.
+            <h2 class="font-semibold font-[montserrat-semibold] text-[2rem] text-slate-700 mb-6 text-center">
+              Blog
+            </h2>
+            <p class="font-[montserrat] text-[1.25rem] text-slate-600 block mb-6 text-center">
+              Próximamente encontrarás aquí artículos sobre educación financiera, consejos para gestionar tu
+              crédito y más recursos útiles.
             </p>
           </div>
         </section>
 
         <!--contacto-->
-        <section id="contacto" class="w-screen py-8">
+        <section id="contacto" class="w-screen py-8 bg-white">
           <div class="w-full max-w-[64rem] my-8 mx-auto block">
-            <h2>Contáctanos</h2>
-            <form>
-              <input type="text" placeholder="Nombre completo" required /><br />
-              <input type="email" placeholder="Correo electrónico" required /><br />
-              <textarea placeholder="Escríbenos tu mensaje" rows="4"></textarea><br />
-              <button class="button" type="submit">Enviar</button>
-            </form>
+            <div class="flex flex-row justify-between items-center gap-x-4">
+              <div class="w-full">
+                <h2
+                  class="font-semibold font-[montserrat-semibold] text-[2rem] text-slate-700 mb-6 text-center"
+                >
+                  Contáctanos
+                </h2>
+                <form class="space-y-4 w-full">
+                  <label for="fullname" class="text-[14px] font-medium font-[montserrat-medium]">
+                    Nombre completo
+                    <input type="text" placeholder="Nombre completo" id="fullname" name="fullname" required />
+                  </label>
+                  <label for="email" class="text-[14px] font-medium font-[montserrat-medium]" required>
+                    Correo electrónico
+                    <input type="email" placeholder="Correo electrónico" id="email" name="email" required />
+                  </label>
+                  <label for="message" class="text-[14px] font-medium font-[montserrat-medium]">
+                    Cuerpo del mensaje
+                    <textarea
+                      placeholder="Escríbenos tu mensaje"
+                      rows="8"
+                      class="block w-full"
+                      id="message"
+                      name="message"
+                    ></textarea>
+                  </label>
+                  <button
+                    class="flex items-center px-8 max-w-max py-4 rounded-md ml-auto bg-blue-500 text-white font-medium font-[montserrat-medium] hover:bg-blue-600 transition-all"
+                    type="submit"
+                  >
+                    Enviar y contactar
+                  </button>
+                </form>
+              </div>
+              <img class="block w-[480px] min-[480px]" style="mix-blend-mode: multiply;""
+              src="https://img.freepik.com/free-psd/portrait-middle-aged-woman_23-2151825943.jpg"
+              alt="contact-us" />
+            </div>
           </div>
         </section>
       </main>
 
       <!--Footer-->
-      <footer class="bg-[--primary] text-white text-center p-4">
-        <p id="copyright"></p>
+      <footer class="bg-[#262626] flex flex-row items-center text-white min-h-14">
+        <p id="copyright" class="mx-auto"></p>
       </footer>
     </div>
   </body>
 
   <!--Scripts-->
-  <script src="src/javascript/global.js"></script>
+  <script src="src/javascript/dom.js"></script>
+  <script>
+    const periodInputElement = document.querySelector("input#period");
+    const amountInputElement = document.querySelector("input#amount");
+    const amountTextElement = document.querySelector("h3#amount-text");
+    const resultInputElement = document.querySelector("#results");
+    const formElement = document.querySelector("form#calculator-form");
+    const mexicanCurrency = { style: "currency", currency: "MXN" };
+
+    const calculateCreditAmount = () => {
+      try {
+        const amount = parseFloat(amountInputElement.value.replace(/,/g, ""));
+        const time = parseInt(periodInputElement.value);
+        const rate = 0.05;
+
+        if (isNaN(amount) || isNaN(time)) throw new Error("Por favor, ingresa valores válidos.");
+
+        const payment = (amount * rate) / (1 - Math.pow(1 + rate, -time));
+        const textContext = getCurrencyFormat(payment.toFixed(2));
+        const currency = getCurrencyFormat(amount);
+
+        amountTextElement.textContent = currency ?? 0;
+        resultInputElement.value = textContext ?? 0;
+      } catch (error) {
+        window.alert(error.message);
+      }
+    };
+
+    const getCurrencyFormat = (value) => new Intl.NumberFormat("es-MX", mexicanCurrency).format(value);
+
+    periodInputElement.addEventListener("input", calculateCreditAmount);
+    amountInputElement.addEventListener("input", calculateCreditAmount);
+    formElement.addEventListener("submit", (e) => e.preventDefault());
+
+    calculateCreditAmount();
+  </script>
 </html>

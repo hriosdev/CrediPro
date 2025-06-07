@@ -10,10 +10,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid rgba(189, 0, 0, 0.486);
+  /* outline: 1px solid rgba(189, 0, 0, 0.486); */
 }
 
-/* FONTS */ 
+/* FONTS */
 @font-face {
   font-family: "montserrat-extrabold";
   src: url("../assets/fonts/Montserrat-ExtraBold.ttf");
@@ -94,6 +94,14 @@ select {
   font-family: "montserrat", sans-serif;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+textarea {
+  display: block;
+  border: 1px solid #33333365;
+  font-size: 1rem;
+  font-family: "montserrat", sans-serif;
+  padding: 1rem !important;
 }
 
 input[type="range"] {
@@ -256,7 +264,7 @@ header.navigation-menu {
   cursor: pointer;
   text-decoration: none;
 }
- 
+
 .blog-post {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
@@ -265,7 +273,7 @@ header.navigation-menu {
     text-decoration: none;
   }
 }
- 
+
 .max-w-360px {
   width: 100%;
   max-width: 360px;
@@ -277,7 +285,7 @@ header.navigation-menu {
     aspect-ratio: 1;
     height: 360px;
   }
-} 
+}
 
 /* Extra small phones (360px - 414px) */
 @media (max-width: 25.875rem) {
