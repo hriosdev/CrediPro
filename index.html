@@ -17,46 +17,38 @@
         width: 100vw;
         height: calc(100vh - 2.5rem);
       }
-      a[role="link"] {
-        position: relative;
 
-        &::before {
-          content: "";
-          position: absolute;
-          height: 2px;
-          width: 0;
-          left: 1.25rem;
-          bottom: 0.75rem;
-          transition: all 150ms linear;
-        }
-
-        &:hover::before {
-          content: "";
-          position: absolute;
-          height: 2px;
-          width: calc(100% - 2.5rem);
-          background-color: white;
-          left: 1.25rem;
-          bottom: 0.75rem;
-          transition: all 150ms linear;
-        }
+      #carrousel {
+        transition: transform 0.5 ease-in-out;
       }
 
-      textarea {
-        resize: none;
-        padding: 1rem;
+      #inicio::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #2c3e50;
+        z-index: 0;
+        transform: skewY(6deg);
+        transform-origin: top right;
       }
     </style>
   </head>
   <body>
     <div id="content">
       <!-- Navigation menu -->
-      <header class="bg-[#262626] text-white text-center relative z-[10]">
+      <header class="bg-[#f9f9f9] text-white text-center relative z-[10]">
         <nav>
           <ul class="flex flex-row justify-center flex-wrap items-center max-h-14 min-h-14">
             <li>
+              <img src="./src/assets/images/logo.png" alt="" class="max-h-10 pr-4" />
+            </li>
+            <li>
               <a
-                class="text-[13px] font-[montserrat-medium] text-white block h-14 px-5 flex items-center hover:bg-[#2c2c2c]"
+                class="text-[13px] font-[montserrat-medium] block h-14 px-5 flex items-center hover:bg-slate-200 text-slate-800"
                 role="link"
                 href="/"
                 >Inicio</a
@@ -64,7 +56,7 @@
             </li>
             <li>
               <a
-                class="text-[13px] font-[montserrat-medium] text-white block h-14 px-5 flex items-center hover:bg-[#2c2c2c]"
+                class="text-[13px] font-[montserrat-medium] block h-14 px-5 flex items-center hover:bg-slate-200 text-slate-800"
                 role="link"
                 href="/nosotros"
                 >¿Quiénes Somos?</a
@@ -72,7 +64,7 @@
             </li>
             <li>
               <a
-                class="text-[13px] font-[montserrat-medium] text-white block h-14 px-5 flex items-center hover:bg-[#2c2c2c]"
+                class="text-[13px] font-[montserrat-medium] block h-14 px-5 flex items-center hover:bg-slate-200 text-slate-800"
                 role="link"
                 href="/simulador"
                 >Solicita tu Crédito</a
@@ -80,7 +72,7 @@
             </li>
             <li>
               <a
-                class="text-[13px] font-[montserrat-medium] text-white block h-14 px-5 flex items-center hover:bg-[#2c2c2c]"
+                class="text-[13px] font-[montserrat-medium] block h-14 px-5 flex items-center hover:bg-slate-200 text-slate-800"
                 role="link"
                 href="/blog"
                 >Blog</a
@@ -88,7 +80,7 @@
             </li>
             <li>
               <a
-                class="text-[13px] font-[montserrat-medium] text-white block h-14 px-5 flex items-center hover:bg-[#2c2c2c]"
+                class="text-[13px] font-[montserrat-medium] block h-14 px-5 flex items-center hover:bg-slate-200 text-slate-800"
                 role="link"
                 href="/contacto"
                 >Contacto</a
@@ -101,34 +93,42 @@
       <!--Inicio-->
       <main>
         <header>
-          <div id="hero-background-picture">
-            <div class="flex flex-row justify-around items-center h-[calc(100vh_-_3rem)]">
-              <h2
-                class="text-white font-bold text-[3rem] font-[montserrat-bold] text-center block max-w-[20%]"
-              >
-                CREDIPRO te ayuda a cumplir tus metas
-              </h2>
-              <img src="https://www.credipro.mx/images/step1-white.png" alt="" />
-              <h3>Solicita tu crédito</h3>
-              <h2
-                class="text-white font-bold text-[3rem] font-[montserrat-bold] text-center block max-w-[20%]"
-              >
-                Avanzamos juntos con CREDIPRO
-                <img src="https://www.credipro.mx/images/step5.png" alt="" />
-                <h3>Firma tu contrato y entrega papeleria</h3>
-              </h2>
-              <h2
-                class="text-white font-bold text-[3rem] font-[montserrat-bold] text-center block max-w-[20%]"
-              >
-                "Compré mi casa gracias a CREDIPRO"
+          <div id="hero-background-picture" class="overflow-hidden">
+            <div
+              id="carrousel"
+              class="flex flex-row justify-around items-center h-[calc(100vh_-_3rem)] max-w-[80%] overflow-hidden mx-auto"
+            >
+              <div class="slide flex flex-col items-center justify-center min-w-full">
+                <h2 class="text-white font-bold text-[2rem] font-[montserrat-bold] text-center">
+                  CREDIPRO te ayuda a cumplir tus metas
+                </h2>
+                <img src="https://www.credipro.mx/images/step1-white.png" alt="" class="max-w-[128px]" />
+                <h3 class="text-[2rem] text-white font-semibold font-[montserrat-semibold] text-center">
+                  Solicita tu crédito
+                </h3>
+              </div>
+              <div class="slide flex flex-col items-center justify-center min-w-full">
+                <h2 class="text-white font-bold text-[2rem] font-[montserrat-bold] text-center">
+                  Avanzamos juntos con CREDIPRO
+                </h2>
+                <img src="https://www.credipro.mx/images/step5.png" alt="" class="max-w-[128px]" />
+                <h3 class="text-[2rem] text-white font-semibold font-[montserrat-semibold] text-center">
+                  Firma tu contrato y entrega papeleria
+                </h3>
+              </div>
+              <div class="slide flex flex-col items-center justify-center min-w-full">
+                <h2 class="text-white font-bold text-[2rem] font-[montserrat-bold] text-center">
+                  "Compré mi casa gracias a CREDIPRO"
+                </h2>
                 <img src="https://www.credipro.mx/images/step3.png" alt="" class="max-w-[128px]" />
-                <h3>Recibe tu dinero en 24 horas</h3>
-              </h2>
+                <h3 class="text-[2rem] text-white font-semibold font-[montserrat-semibold] text-center">
+                  Recibe tu dinero en 24 horas
+                </h3>
+              </div>
             </div>
           </div>
         </header>
-
-        <section id="inicio" class="w-screen py-8 bg-white">
+        <section id="inicio" class="w-screen py-8 bg-white relative">
           <div class="w-full block max-w-[64rem] my-8 mx-auto">
             <div class="flex flex-row justify-between items-center gap-x-4">
               <div class="max-w-1/2">
@@ -321,12 +321,20 @@
   <!--Scripts-->
   <script src="src/javascript/dom.js"></script>
   <script>
+    const carrousel = document.querySelector("#carrousel");
+    const slides = document.querySelectorAll(".slide");
     const periodInputElement = document.querySelector("input#period");
     const amountInputElement = document.querySelector("input#amount");
     const amountTextElement = document.querySelector("h3#amount-text");
     const resultInputElement = document.querySelector("#results");
     const formElement = document.querySelector("form#calculator-form");
     const mexicanCurrency = { style: "currency", currency: "MXN" };
+    let index = 0;
+
+    const nextSlide = () => {
+      index = (index + 1) % slides.length;
+      carrousel.style.tansform = `translateX(-${index * 100}%)`;
+    };
 
     const calculateCreditAmount = () => {
       try {
@@ -354,5 +362,7 @@
     formElement.addEventListener("submit", (e) => e.preventDefault());
 
     calculateCreditAmount();
+
+    setInterval(() => nextSlide(), 4000);
   </script>
 </html>

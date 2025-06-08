@@ -12,40 +12,48 @@
   <body>
     <div id="content">
       <!-- Navigation menu -->
-      <header class="bg-[--primary] text-white text-center relative z-[10]">
+      <header class="bg-[#f9f9f9] text-white text-center relative z-[10]">
         <nav>
-          <ul class="h-[--header-height] flex flex-row justify-center flex-wrap">
-            <li class="my-0 mx-4">
+          <ul class="flex flex-row justify-center flex-wrap items-center max-h-14 min-h-14">
+            <li>
+              <img src="../src/assets/images/logo.png" alt="" class="max-h-10 pr-4" />
+            </li>
+            <li>
               <a
-                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                class="text-[13px] font-[montserrat-medium] block h-14 px-5 flex items-center hover:bg-slate-200 text-slate-800"
+                role="link"
                 href="../"
                 >Inicio</a
               >
             </li>
-            <li class="my-0 mx-4">
+            <li>
               <a
-                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
-                href="../nosotros/"
+                class="text-[13px] font-[montserrat-medium] block h-14 px-5 flex items-center hover:bg-slate-200 text-slate-800"
+                role="link"
+                href="../nosotros"
                 >¿Quiénes Somos?</a
               >
             </li>
-            <li class="my-0 mx-4">
+            <li>
               <a
-                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                class="text-[13px] font-[montserrat-medium] block h-14 px-5 flex items-center hover:bg-slate-200 text-slate-800"
+                role="link"
                 href="#"
                 >Solicita tu Crédito</a
               >
             </li>
-            <li class="my-0 mx-4">
+            <li>
               <a
-                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
-                href="../blog"
+                class="text-[13px] font-[montserrat-medium] block h-14 px-5 flex items-center hover:bg-slate-200 text-slate-800"
+                role="link"
+                href="/blog"
                 >Blog</a
               >
             </li>
-            <li class="my-0 mx-4">
+            <li>
               <a
-                class="text-[1.25rem] font-medium font-[montserrat-medium] uppercase text-white"
+                class="text-[13px] font-[montserrat-medium] block h-14 px-5 flex items-center hover:bg-slate-200 text-slate-800"
+                role="link"
                 href="../contacto"
                 >Contacto</a
               >
@@ -53,16 +61,14 @@
           </ul>
         </nav>
       </header>
+
       <main>
         <section class="w-screen py-8 px-0">
           <div class="w-full block max-w-[64rem] my-8 mx-auto">
             <h2 class="text-center font-bold text-[2rem] block mb-4">¿Cuanto dinero necesitas?</h2>
             <div class="w-3/4 mx-auto">
               <form id="calculator-form" class="w-full">
-                <h3
-                  id="amount-text"
-                  class="text-[3rem] font-semibold font-[montserrat-semibold] text-center"
-                >
+                <h3 id="amount-text" class="text-[3rem] font-semibold font-[montserrat-semibold] text-center">
                   $3,000.00
                 </h3>
                 <div class="input-form amount-range">
@@ -93,15 +99,7 @@
                   <label for="period" class="text-center font-[montserrat-medium]">
                     ¿En cuantas quincenas quieres pagar?
                   </label>
-                  <input
-                    type="range"
-                    value="24"
-                    min="12"
-                    max="60"
-                    step="12"
-                    name="period"
-                    id="period"
-                  />
+                  <input type="range" value="24" min="12" max="60" step="12" name="period" id="period" />
                   <div class="flex flex-row justify-between items-center mb-4 pt-1">
                     <label for="period">12</label>
                     <label for="period">24</label>
@@ -109,9 +107,7 @@
                     <label for="period">48</label>
                     <label for="period">60</label>
                   </div>
-                  <h3 class="text-center block mb-4 font-[montserrat-medium]">
-                    Tu pago quincenal sera de
-                  </h3>
+                  <h3 class="text-center block mb-4 font-[montserrat-medium]">Tu pago quincenal sera de</h3>
                   <input
                     type="text"
                     disabled

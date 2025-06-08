@@ -96,7 +96,33 @@ select {
   padding-right: 1rem;
 }
 
+a[role="link"] {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 1.25rem;
+    bottom: 0.75rem;
+    transition: all 150ms linear;
+  }
+
+  &:hover::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: calc(100% - 2.5rem);
+    background-color: rgb(51, 51, 51);
+    left: 1.25rem;
+    bottom: 0.75rem;
+    transition: all 150ms linear;
+  }
+}
+
 textarea {
+  resize: none;
   display: block;
   border: 1px solid #33333365;
   font-size: 1rem;
